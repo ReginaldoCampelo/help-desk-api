@@ -16,7 +16,7 @@ import com.reginaldo.helpdesk.domain.dtos.ChamadoDTO;
 import com.reginaldo.helpdesk.domain.enums.Prioridade;
 import com.reginaldo.helpdesk.domain.enums.Status;
 import com.reginaldo.helpdesk.repositories.ChamadoRepository;
-import com.reginaldo.helpdesk.services.exceptions.ObjectnotFoundException;
+import com.reginaldo.helpdesk.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class ChamadoService {
@@ -30,7 +30,7 @@ public class ChamadoService {
 
 	public Chamado findById(Integer id) {
 		Optional<Chamado> obj = repository.findById(id);
-		return obj.orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! ID: " + id));
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! ID: " + id));
 	}
 
 	public List<Chamado> findAll() {

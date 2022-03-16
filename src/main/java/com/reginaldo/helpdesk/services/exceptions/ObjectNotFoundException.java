@@ -1,13 +1,13 @@
 package com.reginaldo.helpdesk.services.exceptions;
 
-public class ObjectnotFoundException extends RuntimeException {
+public class ObjectNotFoundException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 
-	public ObjectnotFoundException(String message, Throwable cause) {
+	public ObjectNotFoundException(String message, Throwable cause) {
 		super(message, cause);
 	}
 
-	public ObjectnotFoundException(String message) {
+	public ObjectNotFoundException(String message) {
 		super(message);
 	}
 

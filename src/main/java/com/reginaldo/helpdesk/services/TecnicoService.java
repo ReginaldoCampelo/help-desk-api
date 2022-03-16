@@ -15,7 +15,7 @@ import com.reginaldo.helpdesk.domain.dtos.TecnicoDTO;
 import com.reginaldo.helpdesk.repositories.PessoaRepository;
 import com.reginaldo.helpdesk.repositories.TecnicoRepository;
 import com.reginaldo.helpdesk.services.exceptions.DataIntegrityViolationException;
-import com.reginaldo.helpdesk.services.exceptions.ObjectnotFoundException;
+import com.reginaldo.helpdesk.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class TecnicoService {
@@ -29,7 +29,7 @@ public class TecnicoService {
 
 	public Tecnico findById(Integer id) {
 		Optional<Tecnico> obj = repository.findById(id);
-		return obj.orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! Id: " + id));
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id));
 	}
 
 	public List<Tecnico> findAll() {
