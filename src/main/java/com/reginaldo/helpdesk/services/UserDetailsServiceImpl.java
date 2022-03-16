@@ -13,7 +13,7 @@ import com.reginaldo.helpdesk.repositories.PessoaRepository;
 import com.reginaldo.helpdesk.security.UserSS;
 
 @Service
-public class UserDatailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService{
 	
 	@Autowired
 	private PessoaRepository repository;
