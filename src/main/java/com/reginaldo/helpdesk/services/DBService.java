@@ -29,7 +29,7 @@ public class DBService {
 
 	public void instaciaDB() {
 
-		Tecnico tec1 = new Tecnico(null, "Administrator", "300.934.060-53", "admin@solucaosistemas.net", encoder.encode("masterkey"));
+		Tecnico tec1 = new Tecnico(null, "Administrator", "300.934.060-53", "admin@helpdesk.com", encoder.encode("uniquekey"));
 		tec1.addPerfil(Perfil.ADMIN);
 
 		Tecnico tec2 = new Tecnico(null, "Richard Stallman", "903.347.070-56", "stallman@mail.com", encoder.encode("123456"));
@@ -37,6 +37,7 @@ public class DBService {
 		Tecnico tec4 = new Tecnico(null, "Tim Berners-Lee", "162.720.120-39", "lee@mail.com", encoder.encode("123456"));
 		Tecnico tec5 = new Tecnico(null, "Linus Torvalds", "778.556.170-27", "linus@mail.com", encoder.encode("123456"));
 		Tecnico tec6 = new Tecnico(null, "Natalia Damasceno", "805.330.110-00", "natalia@mail.com", encoder.encode("123456"));
+		Tecnico tec7 = new Tecnico(null, "Guest User", "805.330.110-00", "user@mail.com", encoder.encode("123456"));
 
 		Cliente cli1 = new Cliente(null, "Albert Einstein", "111.661.890-74", "einstein@mail.com", encoder.encode("123456"));
 		Cliente cli2 = new Cliente(null, "Marie Curie", "322.429.140-06", "curie@mail.com", encoder.encode("123456"));
@@ -51,7 +52,7 @@ public class DBService {
 		Chamado c5 = new Chamado(null, Prioridade.MEDIA, Status.ANDAMENTO, "Chamado 5", "Teste chamado 5", tec2, cli1);
 		Chamado c6 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Chamado 7", "Teste chamado 6", tec1, cli5);
 
-		pessoaRepository.saveAll(Arrays.asList(tec1, tec2, tec3 ,tec4, tec5, tec6, cli1, cli2, cli3, cli4, cli5));
+		pessoaRepository.saveAll(Arrays.asList(tec1, tec2, tec3 ,tec4, tec5, tec6, tec7, cli1, cli2, cli3, cli4, cli5));
 		chamadoRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6));
 	}
 }
