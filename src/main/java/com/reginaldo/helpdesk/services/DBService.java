@@ -37,7 +37,7 @@ public class DBService {
 		Tecnico tec4 = new Tecnico(null, "Tim Berners-Lee", "162.720.120-39", "lee@mail.com", encoder.encode("123456"));
 		Tecnico tec5 = new Tecnico(null, "Linus Torvalds", "778.556.170-27", "linus@mail.com", encoder.encode("123456"));
 		Tecnico tec6 = new Tecnico(null, "Natalia Damasceno", "805.330.110-00", "natalia@mail.com", encoder.encode("123456"));
-		Tecnico tec7 = new Tecnico(null, "Guest User", "805.330.110-00", "user@mail.com", encoder.encode("123456"));
+		Tecnico tec7 = new Tecnico(null, "Guest User", "368.011.330-71", "user@mail.com", encoder.encode("123456"));
 
 		Cliente cli1 = new Cliente(null, "Albert Einstein", "111.661.890-74", "einstein@mail.com", encoder.encode("123456"));
 		Cliente cli2 = new Cliente(null, "Marie Curie", "322.429.140-06", "curie@mail.com", encoder.encode("123456"));
