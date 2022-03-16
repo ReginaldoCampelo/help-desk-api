@@ -15,7 +15,7 @@ import com.reginaldo.helpdesk.domain.dtos.ClienteDTO;
 import com.reginaldo.helpdesk.repositories.ClienteRepository;
 import com.reginaldo.helpdesk.repositories.PessoaRepository;
 import com.reginaldo.helpdesk.services.exceptions.DataIntegrityViolationException;
-import com.reginaldo.helpdesk.services.exceptions.ObjectNotFoundException;
+import com.reginaldo.helpdesk.services.exceptions.ObjectnotFoundException;
 
 @Service
 public class ClienteService {
@@ -31,7 +31,7 @@ public class ClienteService {
 	
 	public Cliente findById(Integer id) {
 		Optional<Cliente> obj = repository.findById(id);
-		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id: " + id));
+		return obj.orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! Id: " + id));
 	}
 
 	public List<Cliente> findAll() {
